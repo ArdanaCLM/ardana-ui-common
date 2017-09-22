@@ -1,0 +1,209 @@
+.ansi-black {
+  color: #3F3F3F; }
+  .ansi-black.intense {
+    color: #709080; }
+
+.ansi-background-black {
+  background-color: #3F3F3F; }
+
+.ansi-red {
+  color: #C25E00; }
+  .ansi-red.intense {
+    color: #DCA3A3; }
+
+.ansi-background-red {
+  background-color: #C25E00; }
+
+.ansi-green {
+  color: #60B48A; }
+  .ansi-green.intense {
+    color: #72D5A3; }
+
+.ansi-background-green {
+  background-color: #60B48A; }
+
+.ansi-yellow {
+  color: #DFAF8F; }
+  .ansi-yellow.intense {
+    color: #F0DFAF; }
+
+.ansi-background-yellow {
+  background-color: #DFAF8F; }
+
+.ansi-blue {
+  color: #9AB8D7; }
+  .ansi-blue.intense {
+    color: #94BFF3; }
+
+.ansi-background-blue {
+  background-color: #9AB8D7; }
+
+.ansi-purple {
+  color: #DC8CC3; }
+  .ansi-purple.intense {
+    color: #EC93D3; }
+
+.ansi-background-purple {
+  background-color: #DC8CC3; }
+
+.ansi-cyan {
+  color: #8CD0D3; }
+  .ansi-cyan.intense {
+    color: #93E0E3; }
+
+.ansi-background-cyan {
+  background-color: #8CD0D3; }
+
+.ansi-white {
+  color: #DCDCCC; }
+  .ansi-white.intense {
+    color: #FFFFFF; }
+
+.ansi-background-white {
+  background-color: #DCDCCC; }
+
+.intense {
+  font-weight: bold; }
+
+/* Source Code Pro Regular */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Code Pro"), local("SourceCodePro-Regular"), url(./fonts/SourceCodePro-Regular.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+/* Source Code Pro Bold */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Source Code Pro Bold"), local("SourceCodePro-Bold"), url(./fonts/SourceCodePro-Bold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+.title {
+  padding: 10px;
+  -ms-flex: none;
+  flex: none; }
+
+.log-list-with-controls {
+  -ms-flex: 1 1 151px;
+  flex: 1 1 151px;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
+  .log-list-with-controls .ansible-controls {
+    -ms-flex: none;
+    flex: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    padding: 5px 10px 10px 10px; }
+    .log-list-with-controls .ansible-controls input[type='checkbox'] {
+      position: relative;
+      top: 2px;
+      margin-right: 5px; }
+    .log-list-with-controls .ansible-controls button {
+      margin-right: 10px; }
+    .log-list-with-controls .ansible-controls .filler {
+      -ms-flex: 1 1 0px;
+      flex: 1 1 0px; }
+    .log-list-with-controls .ansible-controls .pid-label {
+      margin: 0 10px; }
+      .log-list-with-controls .ansible-controls .pid-label span {
+        font-family: "Source Code Pro";
+        font-size: 14px; }
+  .log-list-with-controls .log-list {
+    -ms-flex: 1 0 100px;
+    flex: 1 0 100px;
+    overflow-y: scroll;
+    transform: translateZ(0);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+    border-bottom: #ccc 1px solid;
+    cursor: default;
+    background-color: #F3F3F3; }
+    .log-list-with-controls .log-list table {
+      width: 100%; }
+      .log-list-with-controls .log-list table th {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .log-list-with-controls .log-list table td {
+        text-align: left;
+        vertical-align: baseline;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .log-list-with-controls .log-list table tr:not(.active-log):hover {
+        background-color: #FFFFFF;
+        cursor: pointer; }
+      .log-list-with-controls .log-list table tr.active-log {
+        background-color: rgba(0, 169, 130, 0.15); }
+      .log-list-with-controls .log-list table .command-string {
+        font-family: "Source Code Pro";
+        font-size: 14px; }
+      .log-list-with-controls .log-list table .left-padding {
+        padding-left: 20px; }
+      .log-list-with-controls .log-list table .right-align {
+        text-align: right; }
+
+.log-container {
+  -ms-flex: 4 1 0px;
+  flex: 4 1 0px;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  color: #DCDCCC;
+  background-color: #2C2C2C;
+  line-height: 1.3;
+  font-size: 11.25pt;
+  font-family: "Source Code Pro", monospace;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 10px 20px 10px;
+  transform: translateZ(0); }
+
+.resizable-split-panel {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
+  -ms-flex-item-align: stretch;
+  align-self: stretch; }
+  .resizable-split-panel .resizable-split-panel-splitter {
+    width: 100%;
+    height: 8px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    -ms-flex: none;
+    flex: none;
+    position: relative;
+    cursor: row-resize;
+    background-color: transparent;
+    z-index: 1; }
+
+html.split-panel-resizing * {
+  cursor: row-resize !important; }
+
+.split-panel-resize-indicator {
+  height: 3px;
+  position: absolute;
+  cursor: row-resize;
+  background-color: red;
+  opacity: 0.7;
+  z-index: 2; }

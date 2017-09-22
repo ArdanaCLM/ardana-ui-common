@@ -1,0 +1,138 @@
+@import 'fonts';
+
+.title {
+    padding: 10px;
+    flex: none;
+}
+
+.log-list-with-controls {
+    flex: 1 1 151px;
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+//    border: solid 20px red;
+
+    .ansible-controls {
+        flex: none;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        align-self: stretch;
+        padding: 5px 10px 10px 10px;
+
+        input[type='checkbox'] {
+            position: relative;
+            top: 2px;
+            margin-right: 5px;
+        }
+
+        button {
+            margin-right: 10px
+        }
+
+        .filler {
+            flex: 1 1 0px;
+        }
+
+        .pid-label {
+            margin: 0 10px;
+            span {
+                font-family: "Source Code Pro";
+                font-size: 14px;
+            }
+        }
+    }
+
+    .log-list {
+        flex: 1 0 100px;
+        overflow-y: scroll;
+        transform: translateZ(0);
+        align-self: stretch;
+        border-bottom: #ccc 1px solid;
+        cursor: default;
+        background-color: #F3F3F3;
+
+        table {
+            width: 100%;
+            th {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            td {
+                text-align: left;
+                vertical-align: baseline;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            tr:not(.active-log):hover {
+                background-color: #FFFFFF;
+                cursor: pointer;
+            }
+            tr.active-log {
+                background-color: rgba(0, 169, 130, 0.15);
+            }
+            .command-string {
+                font-family: "Source Code Pro";
+                font-size: 14px;
+            }
+            .left-padding {
+                padding-left: 20px;
+            }
+            .right-align {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.log-container {
+    flex: 4 1 0px;
+    align-self: stretch;
+    color: #DCDCCC;
+    background-color: #2C2C2C;
+    line-height: 1.3;
+    font-size: 11.25pt;
+    font-family: "Source Code Pro", monospace;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0 10px 20px 10px;
+    transform: translateZ(0);
+}
+
+// TODO: Split out these into separate scss
+.resizable-split-panel {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 0px;
+    align-self: stretch;
+
+    $splitter-grab-half-height: 4px;
+    .resizable-split-panel-splitter {
+        width: 100%;
+        height: 2 * $splitter-grab-half-height;
+        margin-top: -$splitter-grab-half-height;
+        margin-bottom: -$splitter-grab-half-height;
+        flex: none;
+        position: relative;
+        cursor: row-resize;
+        background-color: transparent;
+        z-index: 1;
+    }
+}
+
+html.split-panel-resizing * {
+    cursor: row-resize !important;
+}
+
+.split-panel-resize-indicator {
+    height: 3px;
+    position: absolute;
+    cursor: row-resize;
+    background-color: red;
+    opacity: 0.7;
+    z-index: 2;
+}

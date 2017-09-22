@@ -1,0 +1,26 @@
+{
+  "name": "ardana-ui-common",
+  "authors": [
+    "Julien Bramary"
+  ],
+  "description": "Common frontend components used by Day-N UIs",
+  "main": [
+    "dist/ardana-ui-common.js",
+    "dist/ardana-ui-common.css",
+    "dist/fonts/SourceCodePro-Regular.woff2",
+    "dist/fonts/SourceCodePro-Bold.woff2"
+  ],
+  "license": "Apache",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "1.3.4",
+    "angular-websocket": "1.0.13",
+    "lodash": "3.10.1"
+  }
+}
